@@ -1,6 +1,15 @@
 from rich.console import Console
 from rich.table import Table
 from rich import box
+import os
+
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+def display_title():
+    clear_screen()
+    console.print("\n[bold magenta]EPIC EVENTS CRM[/bold magenta]", justify="center")
+    console.print("[dim]─────────────────────────────[/dim]", justify="center")
 
 console = Console()
 
